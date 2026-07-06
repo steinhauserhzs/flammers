@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Flammers — A Jornada</title>
+  <meta name="description" content="Complete as fases, fuja dos golpes, encha o Cofre dos Sonhos e vire uma lenda da grana. Um jogo da Flamma (Fire·ce)." />
+  <meta name="theme-color" content="#241534" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/art/logo.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="css/j.css?v=8" />
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M14.5 5l-7 7 7 7"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.2" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8L12 3z"/></symbol>
+    <symbol id="i-star-f" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 3l2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8L12 3z"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c2 3.5 6 5 6 10a6 6 0 0 1-12 0c0-2.5 1-4.5 2.5-6C8.5 9 10 9.5 10.5 8c.5-1.5.8-3.2 1.5-5z"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v10M9.5 9.5c0-1 1-1.7 2.5-1.7s2.5.7 2.5 1.7-1 1.4-2.5 1.8-2.5.8-2.5 1.8 1 1.7 2.5 1.7 2.5-.7 2.5-1.7"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="14" r="4.5"/><path d="M11.5 10.5L20 3M16 5l3 3M13 8l2.5 2.5"/></symbol>
+    <symbol id="i-radar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 12l6-6"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 8h12l1 12H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M7 4l13 8-13 8V4z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9c1.2 1.6 1.2 4.4 0 6M18.5 6.5c2.4 3 2.4 8 0 11"/></symbol>
+    <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 9.5l5 5M21.5 9.5l-5 5"/></symbol>
+  </defs>
+</svg>
+
+<div id="stage">
+
+  <!-- ===== TÍTULO / ESCOLHA ===== -->
+  <div class="scr active" id="scr-title">
+    <div class="title-inner">
+      <img src="assets/art/logo.svg" alt="" class="t-logo" />
+      <div class="t-brand">FLAMMERS</div>
+      <div class="t-sub">A JORNADA DA GRANA</div>
+      <div class="t-pick-label">Quem é você nessa história?</div>
+      <div class="hero-row">
+        <button class="hero-card" data-hero="duda"><img src="assets/art/duda.svg" alt="Duda" /><span>Duda</span></button>
+        <button class="hero-card" data-hero="kai"><img src="assets/art/kai.svg" alt="Kai" /><span>Kai</span></button>
+      </div>
+      <div class="t-inputs">
+        <input id="in-name" class="t-input" type="text" maxlength="14" placeholder="Seu nome" autocomplete="off" />
+        <input id="in-age" class="t-input small" type="number" min="8" max="99" placeholder="Idade" />
+      </div>
+      <button class="big-btn" id="btn-start" disabled>COMEÇAR A JORNADA</button>
+      <div class="t-foot">um jogo FLAMMA · fire·ce</div>
+    </div>
+  </div>
+
+  <!-- ===== MAPA ===== -->
+  <div class="scr" id="scr-map">
+    <img src="assets/art/map-bg.svg" alt="" class="map-bg" id="map-bg" />
+    <div class="map-veil"></div>
+
+    <div class="map-top">
+      <div class="chip coins-chip"><svg class="ic"><use href="#i-coin"/></svg><b id="mp-coins">0</b></div>
+      <button class="chip dream-chip" id="btn-dream">
+        <img id="mp-dream-img" src="assets/art/dream-bike.svg" alt="" />
+        <div class="dream-mid">
+          <div class="dream-name" id="mp-dream-name">Bike nova</div>
+          <div class="dream-track"><div class="dream-fill" id="mp-dream-fill"></div></div>
+        </div>
+        <b id="mp-dream-pct">0%</b>
+      </button>
+      <button class="chip icon-chip" id="btn-mute" aria-label="Som liga/desliga"><svg class="ic"><use id="mute-ic" href="#i-sound"/></svg></button>
+      <button class="chip icon-chip" id="btn-config" aria-label="Ajustes"><svg class="ic"><use href="#i-gear"/></svg></button>
+    </div>
+
+    <div id="map-nodes"></div>
+
+    <div class="map-guide" id="map-guide">
+      <img src="assets/art/re.svg" alt="Rê" class="guide-av" />
+      <div class="guide-bubble" id="guide-text">Bem-vinde ao Clube Flammers!</div>
+    </div>
+
+    <div class="map-bottom">
+      <button class="chip wide" id="btn-shop"><svg class="ic"><use href="#i-bag"/></svg> Lojinha</button>
+      <button class="chip wide" id="btn-stickers"><svg class="ic"><use href="#i-star"/></svg> Conquistas</button>
+    </div>
+  </div>
+
+  <!-- ===== FASE ===== -->
+  <div class="scr" id="scr-level">
+    <div class="lv-scene">
+      <img id="lv-bg" class="lv-bg" src="" alt="" />
+      <div class="lv-scene-veil"></div>
+      <div class="lv-head">
+        <button class="chip icon-chip" id="btn-quit" aria-label="Sair"><svg class="ic"><use href="#i-chev"/></svg></button>
+        <div class="chip lv-title-chip" id="lv-title">Fase 1</div>
+        <button class="chip icon-chip" id="btn-mute-lv" aria-label="Som liga/desliga"><svg class="ic"><use id="mute-ic-lv" href="#i-sound"/></svg></button>
+        <div class="chip coins-chip small"><svg class="ic"><use href="#i-coin"/></svg><b id="lv-coins">0</b></div>
+      </div>
+      <img id="lv-portrait" class="lv-portrait" src="" alt="" />
+      <div id="lv-float"></div>
+    </div>
+
+    <div class="lv-panel">
+      <div id="lv-dialog" class="lv-dialog">
+        <div class="lv-speaker" id="lv-speaker">Rê</div>
+        <div class="lv-text" id="lv-text"></div>
+        <div class="lv-tap" id="lv-tap">toque para continuar</div>
+      </div>
+      <div id="lv-phone" class="lv-phone">
+        <div class="lv-phone-head"><svg class="ic sm"><use href="#i-phone"/></svg> mensagem recebida</div>
+        <div id="lv-phone-msgs"></div>
+      </div>
+      <div id="lv-choices" class="lv-choices"></div>
+    </div>
+  </div>
+
+  <!-- ===== RESULTADO ===== -->
+  <div class="scr" id="scr-result">
+    <div class="result-card">
+      <div class="r-title" id="r-title">Fase concluída!</div>
+      <div class="stars-row" id="r-stars"></div>
+      <div class="r-coins"><svg class="ic"><use href="#i-coin"/></svg> <b id="r-coins">+0</b> moedas</div>
+      <div class="r-lesson" id="r-lesson"></div>
+      <div class="r-cofre-label">Quanto vai pro Cofre dos Sonhos?</div>
+      <div class="r-cofre-row">
+        <button class="big-btn small" id="btn-save-all">Guardar tudo</button>
+        <button class="big-btn small ghost" id="btn-save-half">Metade (metade fica livre)</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div id="modal"><div id="modal-box"></div></div>
+<div id="toast"></div>
+<div id="confetti"></div>
+
+<script src="js/j-data.js?v=8"></script>
+<script src="js/j-levels.js?v=8"></script>
+<script src="js/audio.js?v=8"></script>
+<script src="js/jornada.js?v=8"></script>
+</body>
+</html>
