@@ -608,3 +608,9 @@ input[type="range"].split-range {
 .price-val { font-size: 30px; font-weight: 900; color: var(--gold); min-width: 90px; text-align: center; }
 .price-sim { text-align: center; font-size: 13px; font-weight: 800; margin-bottom: 12px; line-height: 1.6; }
 .price-sim b.lucro { color: var(--ok); }
+
+/* tick de contador subindo */
+@media (prefers-reduced-motion: no-preference) {
+  .chip.tickup { animation: tickup 0.45s cubic-bezier(0.2, 1.4, 0.4, 1); }
+}
+@keyframes tickup { 40% { transform: scale(1.14); box-shadow: 0 0 18px rgba(255, 209, 102, 0.5); } }

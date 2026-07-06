@@ -72,11 +72,18 @@ function levelState(id) {
   return "locked";
 }
 
+let lastCoinsShown = null;
 function renderMap() {
-  $j("mp-coins").textContent = jfmt(J.coins);
+  const coinsEl = $j("mp-coins");
+  coinsEl.textContent = jfmt(J.coins);
+  if (lastCoinsShown !== null && J.coins !== lastCoinsShown) {
+    coinsEl.parentElement.classList.add("tickup");
+    setTimeout(() => coinsEl.parentElement.classList.remove("tickup"), 500);
+  }
+  lastCoinsShown = J.coins;
   const dream = DREAMS.find(d => d.id === J.dream) || DREAMS[0];
   $j("mp-dream-img").src = dream.img;
-  $j("mp-dream-name").textContent = dream.name;
+  $j("mp-dream-name").textContent = dream.name + " · R$ " + jfmt(J.cofre) + "/" + jfmt(dream.cost);
   const pct = Math.min(100, Math.round(J.cofre / dream.cost * 100));
   $j("mp-dream-fill").style.width = pct + "%";
   $j("mp-dream-pct").textContent = pct + "%";
@@ -551,12 +558,21 @@ function endLevel() {
   Sfx.fanfare();
   if (stars === 3) confetti();
 
-  $j("btn-save-all").onclick = () => { Sfx.cashIn(); J.cofre += coins; finishResult(); };
+  const half1 = Math.ceil(coins / 2), half2 = Math.floor(coins / 2);
+  $j("btn-save-all").textContent = "Guardar tudo (+" + jfmt(coins) + " no cofre)";
+  $j("btn-save-half").textContent = "Metade (+" + jfmt(half1) + " cofre / +" + jfmt(half2) + " livre)";
+  $j("btn-save-all").onclick = () => {
+    Sfx.cashIn();
+    J.cofre += coins;
+    finishResult();
+    toast("+" + jfmt(coins) + " moedas no Cofre dos Sonhos");
+  };
   $j("btn-save-half").onclick = () => {
     Sfx.cashIn();
-    J.cofre += Math.ceil(coins / 2);
-    J.coins += Math.floor(coins / 2);
+    J.cofre += half1;
+    J.coins += half2;
     finishResult();
+    toast("+" + jfmt(half1) + " no cofre · +" + jfmt(half2) + " moedas livres");
   };
 }
 

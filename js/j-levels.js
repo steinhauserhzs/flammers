@@ -693,7 +693,7 @@ const JLEVELS = [
     "t": "mini",
     "kind": "price",
     "cost": 2,
-    "goal": 90,
+    "goal": 70,
     "prompt": "Hora de precificar o brigadeiro! Cada um custa R$ 2 pra fazer. Ajusta o preço e olha o que acontece com as vendas.",
     "sub": "Preço alto = vende menos. Preço baixo = lucro fininho. Ache o ponto certo!",
     "win": "Preço redondo: cobre o custo, o cliente paga sorrindo e o lucro aparece. Empreendedor nato!",
