@@ -621,3 +621,5 @@ button { font-family: inherit; color: inherit; }
   animation: fall 2.1s ease-in forwards;
 }
 @keyframes fall { to { transform: translateY(105vh) rotate(540deg); opacity: 0.6; } }
+
+html, body { position: fixed; inset: 0; width: 100%; overflow: hidden; overscroll-behavior: none; touch-action: manipulation; }

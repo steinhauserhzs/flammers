@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>Flammers — A Jornada</title>
   <meta name="description" content="Complete as fases, fuja dos golpes, encha o Cofre dos Sonhos e vire uma lenda da grana. Um jogo da Flamma (Fire·ce)." />
   <meta name="theme-color" content="#241534" />
@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="assets/icon-192.png" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="stylesheet" href="css/j.css?v=11" />
+  <link rel="stylesheet" href="css/j.css?v=12" />
 </head>
 <body>
 
@@ -86,9 +86,14 @@
     </div>
 
     <div class="map-bottom">
-      <button class="chip wide" id="btn-shop"><svg class="ic"><use href="#i-bag"/></svg> Lojinha</button>
-      <button class="chip wide" id="btn-stickers"><svg class="ic"><use href="#i-star"/></svg> Conquistas</button>
-      <button class="chip wide" id="btn-mv" style="border-color:rgba(78,205,196,0.5)"><svg class="ic" style="color:#4ecdc4"><use href="#i-heart"/></svg> Minha Vida</button>
+      <div class="map-row">
+        <button class="chip wide feat teal" id="btn-mv"><svg class="ic"><use href="#i-heart"/></svg> Minha Vida</button>
+        <button class="chip wide feat lilac" id="btn-vida16"><svg class="ic"><use href="#i-phone"/></svg> Vida Real 16+</button>
+      </div>
+      <div class="map-row">
+        <button class="chip wide" id="btn-shop"><svg class="ic"><use href="#i-bag"/></svg> Lojinha</button>
+        <button class="chip wide" id="btn-stickers"><svg class="ic"><use href="#i-star"/></svg> Conquistas</button>
+      </div>
     </div>
   </div>
 
@@ -142,9 +147,9 @@
 <div id="toast"></div>
 <div id="confetti"></div>
 
-<script src="js/j-data.js?v=11"></script>
-<script src="js/j-levels.js?v=11"></script>
-<script src="js/audio.js?v=11"></script>
-<script src="js/jornada.js?v=11"></script>
+<script src="js/j-data.js?v=12"></script>
+<script src="js/j-levels.js?v=12"></script>
+<script src="js/audio.js?v=12"></script>
+<script src="js/jornada.js?v=12"></script>
 </body>
 </html>
