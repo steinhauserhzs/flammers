@@ -34,6 +34,8 @@
 | Progressão | 10 fases · 1–3 estrelas · Cofre dos Sonhos | Do rotativo de R$ 8.000 ao F.I.R.E. (renda passiva > custo de vida) |
 | Onde | [`index.html`](index.html) | [`vida.html`](vida.html) |
 
+> ➕ **[Minha Vida](minha-vida.html)** — o terceiro pilar: finanças **reais** do jogador com análise da Rê (veja abaixo).
+
 <div align="center">
 <img src="assets/art/duda.svg" width="130" alt="Duda" />
 <img src="assets/art/kai.svg" width="130" alt="Kai" />
@@ -41,6 +43,18 @@
 
 *Duda e Kai (protagonistas jogáveis) e Rê, a mentora do Clube Flammers.*
 </div>
+
+## ❤️ Minha Vida — do jogo pra vida real
+
+O diferencial do Flammers: uma seção onde o jogador aplica o que aprendeu **na própria vida** (100% privado, dados só no aparelho):
+
+- **Carteira real** — anota ganhos e gastos por categoria; saldo do mês na cara
+- **Metas reais** — o Cofre dos Sonhos da vida real: cria a meta, registra depósitos, celebra a conquista
+- **Planos** — checklist de próximos passos financeiros
+- **Rê Analisa** — a mentora analisa os números REAIS e devolve dicas personalizadas (taxa de poupança, categoria dominante, meta perto do fim, streak)
+- **Resumo visual** — gráfico de gastos por categoria + taxa de poupança
+- **Conquistas reais + streak** de dias anotando
+- **Exportação** — backup JSON e planilha CSV: os dados são do usuário
 
 ## 🕹️ Destaques
 

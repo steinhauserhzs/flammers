@@ -44,3 +44,7 @@ Simulador: o jogador assume o celular de **Jô** (27, CLT, R$ 8.000 no rotativo 
 - `theme` (mapa): sequenciador I–V–vi–IV animado · `chill` (fases normais) · `tense` (fases de golpe)
 - Ambiências por cenário: plinks aleatórios parametrizados (passarinhos no parque, burburinho na escola, louça na cantina)
 - Mute persistente em 3 pontos da UI (mapa, fase, ajustes)
+
+
+## Minha Vida (ponte jogo → realidade)
+Módulo de finanças pessoais REAIS (`minha-vida.html` + `js/minha-vida.js`, storage local `flammersmv_save`): carteira (transações por categoria), metas com depósitos e celebração, planos (checklist), resumo com gráfico por categoria e taxa de poupança, conquistas reais, streak de registro diário e exportação JSON/CSV. **"Rê Analisa"**: motor de regras que lê os dados reais do mês e gera dicas personalizadas (gasto > ganho, categoria dominante >40%, poupança ≥20%, meta ≥70%, streak ≥3). Privacidade por design: nenhum dado sai do aparelho.

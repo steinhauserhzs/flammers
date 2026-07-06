@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Flammers — Minha Vida</title>
+  <meta name="description" content="Sua vida financeira de verdade: carteira, metas, planos e as dicas da Rê sobre os SEUS números. 100% privado, no seu aparelho." />
+  <meta name="theme-color" content="#241534" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/art/logo.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="css/j.css?v=11" />
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M14.5 5l-7 7 7 7"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M16 12.5h5"/><circle cx="16.5" cy="12.5" r="0.9" fill="currentColor" stroke="none"/><path d="M3 8.5L15 4l1.5 2"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4"/><path d="M4 20h16"/><path d="M7 15l4-5 3 3 5-7"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v10M9.5 9.5c0-1 1-1.7 2.5-1.7s2.5.7 2.5 1.7-1 1.4-2.5 1.8-2.5.8-2.5 1.8 1 1.7 2.5 1.7 2.5-.7 2.5-1.7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></symbol>
+    <symbol id="i-star-f" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 3l2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8L12 3z"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c2 3.5 6 5 6 10a6 6 0 0 1-12 0c0-2.5 1-4.5 2.5-6C8.5 9 10 9.5 10.5 8c.5-1.5.8-3.2 1.5-5z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V5h6v2M7 7l1 13h8l1-13"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5"/><path d="M5 20h14"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V6M6 12l6-6 6 6"/></symbol>
+    <symbol id="i-dn" viewBox="0 0 24 24"><path d="M12 4v14M6 12l6 6 6-6"/></symbol>
+  </defs>
+</svg>
+
+<div id="stage">
+  <div class="scr active" id="scr-mv">
+    <div class="app-header" style="--hc:#1f8a70; background:linear-gradient(135deg,#1f8a70,#14614e)">
+      <button class="back-btn" id="mv-back" aria-label="Voltar"><svg class="ic"><use href="#i-chev"/></svg></button>
+      <h2>Minha Vida</h2>
+      <span class="hdr-right mv-streak"><svg class="ic sm"><use href="#i-flame"/></svg><b id="mv-streak">0</b></span>
+    </div>
+
+    <div class="mv-privacy"><svg class="ic sm"><use href="#i-lock"/></svg> Seus dados ficam SÓ no seu aparelho. Nada é enviado pra lugar nenhum.</div>
+
+    <div class="mv-tabs">
+      <button class="mv-tab active" data-tab="carteira"><svg class="ic"><use href="#i-wallet"/></svg>Carteira</button>
+      <button class="mv-tab" data-tab="metas"><svg class="ic"><use href="#i-target"/></svg>Metas</button>
+      <button class="mv-tab" data-tab="planos"><svg class="ic"><use href="#i-note"/></svg>Planos</button>
+      <button class="mv-tab" data-tab="resumo"><svg class="ic"><use href="#i-chart"/></svg>Resumo</button>
+    </div>
+
+    <div class="app-body" id="mv-body"></div>
+
+    <button class="mv-fab" id="mv-add" aria-label="Adicionar"><svg class="ic"><use href="#i-plus"/></svg></button>
+  </div>
+</div>
+
+<div id="modal"><div id="modal-box"></div></div>
+<div id="toast"></div>
+<div id="confetti"></div>
+
+<script src="js/audio.js?v=11"></script>
+<script src="js/minha-vida.js?v=11"></script>
+</body>
+</html>

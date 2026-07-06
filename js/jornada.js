@@ -742,6 +742,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   $j("btn-dream").onclick = () => { Sfx.click(); dreamModal(false); };
   $j("btn-shop").onclick = () => { Sfx.click(); shopModal(); };
+  $j("btn-mv").onclick = () => { Sfx.click(); window.location.href = "minha-vida.html"; };
   $j("btn-stickers").onclick = () => { Sfx.click(); achieveModal(); };
   $j("btn-config").onclick = () => { Sfx.click(); configModal(); };
   $j("btn-quit").onclick = () => { Sfx.click(); clearInterval(typing); show("scr-map"); renderMap(); };

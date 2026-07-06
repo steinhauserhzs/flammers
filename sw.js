@@ -1,9 +1,9 @@
 /* FLAMMERS — Service Worker v5
    HTML: network-first (atualizações instantâneas)
    Assets: cache-first (velocidade + offline) */
-const CACHE = "flammers-v5";
+const CACHE = "flammers-v6";
 const ASSETS = [
-  "./", "./index.html", "./vida.html",
+  "./", "./index.html", "./vida.html", "./minha-vida.html", "./js/minha-vida.js",
   "./css/j.css", "./css/style.css",
   "./js/j-data.js", "./js/j-levels.js", "./js/jornada.js",
   "./js/data.js", "./js/engine.js", "./js/ui.js", "./js/audio.js",
